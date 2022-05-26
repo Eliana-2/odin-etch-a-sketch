@@ -9,11 +9,20 @@ function setSquares(squaresPerSide)
     {
       const squareDiv = document.createElement(`div`);
       squareDiv.setAttribute(`style`, `flex: 0 0 auto; height: ${side}px; width: ${side}px`);
+      squareDiv.addEventListener(`mouseover`, () => {
+        squareDiv.style.backgroundColor = `black`;
+      });
       rowDiv.appendChild(squareDiv);
     }
     rowDiv.setAttribute(`style`, `display: flex; flex: 0 0 auto; height: ${side}px;`);
     content.appendChild(rowDiv);
   }
+}
+
+function removeSquares()
+{
+  const content = document.querySelector(`#content`);
+  content.innerHTML = ``;
 }
 
 const sizeButton = document.querySelector(`#size-button`);
@@ -22,6 +31,6 @@ sizeButton.addEventListener(`click`, () => {
   do {
     squaresPerSide = +prompt(`How many squares per side?`)
   } while (squaresPerSide > 100 || squaresPerSide < 0);
-
+  removeSquares();
   setSquares(squaresPerSide);
 })

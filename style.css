@@ -6,9 +6,9 @@ body {
 }
 
 #size-button {
-  font-size: 18px;
-  padding: 16px;
-  margin: 16px;
+  font-size: 24px;
+  padding: 20px;
+  margin: 48px;
 }
 
 #content {
@@ -17,4 +17,5 @@ body {
   width: 1000px;
   height: 1000px;
   flex: 0 0 auto;
+  border-style: solid;
 }
