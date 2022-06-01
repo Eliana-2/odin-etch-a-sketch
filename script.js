@@ -34,3 +34,5 @@ sizeButton.addEventListener(`click`, () => {
   removeSquares();
   setSquares(squaresPerSide);
 })
+
+setSquares(100);
